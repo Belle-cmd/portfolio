@@ -6,6 +6,7 @@
     --name-color: #f7d1cd;
     --name-font-size: 50px;
     --subheader-font-size: 30px;
+    --subheader-color: #c4feb1;
     --content-font-size: 18px;
 }
 
@@ -21,6 +22,10 @@ body {
     margin: 0;
     padding: 0;
 }
+h2 {
+    color: var(--subheader-color);
+    font-size: var(--subheader-font-size);
+}
 .line {
     /* Creates a dotted line used indicate page sections */
     border-top: 3px dashed #e8c2ca;
@@ -28,6 +33,11 @@ body {
     z-index: -1;
     margin-left: -15px;
     margin-bottom: 25px;
+}
+h3 {
+    /* header used for project card titles */
+    color: var(--bg-color);
+    font-size: 20px;
 }
 
 
@@ -81,7 +91,7 @@ b:hover {
     /* animation-iteration-count: infinite; */
 }
 .banner p {
-    color: #c2ddb9;
+    color: var(--subheader-color);
     font-size: var(--subheader-font-size);
     margin: 0;
     padding: 0;
@@ -93,9 +103,6 @@ b:hover {
     flex-direction: inherit;
     height: 100vh;
     padding: 0px 15vw;
-}
-.about-me h2 {
-    font-size: var(--subheader-font-size);
 }
 .main-info {
     display: flex;
@@ -116,5 +123,40 @@ b:hover {
     height: auto;
     width: 300px;
     margin-right: 100px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(37, 1, 43, 0.562) 0px 10px 25px;
+}
+
+
+.projects {
+    display: flex;
+    flex-direction: inherit;
+    padding: 0px 15vw;
+    padding-bottom: 50px;
+}
+.project-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.project-card {
+    background-color: var(--card-boarder-color);
+    border-radius: 3px;
+    width: 20vw;
+    height: 45vh;
+    margin: 5px;
+    padding: 20px;
+}
+.project-card p {
+    color: var(--bg-color);
+}
+.projectlinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.project-card a img {
+    height: auto;
+    width: 30px;
+}
+.project-card a {
+    margin-left: 20px;
 }
