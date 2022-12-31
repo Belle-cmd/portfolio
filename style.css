@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&family=Roboto+Slab:wght@200;400&display=swap');
 
 :root {
-    --bg-color: #428c86;
-    --banner-name-color: #e63946;
-    --card-boarder-color: #1d3557;
-    --text-color: #f1faee;
+    --bg-color: #735d78;
+    --card-boarder-color: #d1b3c4;
+    --name-color: #f7d1cd;
+    --name-font-size: 50px;
+    --subheader-font-size: 30px;
+    --content-font-size: 18px;
 }
 
 body {
@@ -12,11 +14,20 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Slab', serif;
 
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--name-color);
     margin: 0;
     padding: 0;
+}
+.line {
+    /* Creates a dotted line used indicate page sections */
+    border-top: 3px dashed #e8c2ca;
+    width: 110%;
+    z-index: -1;
+    margin-left: -15px;
+    margin-bottom: 25px;
 }
 
 
@@ -33,7 +44,6 @@ body {
     width: 100px;
     margin: 20px;
 }
-
 .accounts a > img {
     padding: 10px;
     height: auto;
@@ -52,19 +62,59 @@ body {
 }
 .banner h1 {
     margin-bottom: 15px;
-    font-size: 50px;
+    font-size: var(--name-font-size);
+}
+@keyframes color {
+    0%   { color: var(--name-color);}
+    50%  { color: #cde7bc; }
+    100%  { color: #92d7ab; }
 }
 b {
     /* The letter D and B */
     font-size: 110px;
 }
+b:hover {
+    animation: color 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+    /* animation-iteration-count: infinite; */
+}
 .banner p {
-    font-size: 16px;
+    color: #c2ddb9;
+    font-size: var(--subheader-font-size);
     margin: 0;
     padding: 0;
 }
 
-.about-me img {
+
+.about-me {
+    display: flex;
+    flex-direction: inherit;
+    height: 100vh;
+    padding: 0px 15vw;
+}
+.about-me h2 {
+    font-size: var(--subheader-font-size);
+}
+.main-info {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    font-size: var(--content-font-size);
+}
+.text {
+    display: flex;
+    flex-direction: inherit;
+    font-size: 60px;
+}
+.text p {
+    margin: 50px 0;
+}
+.main-info  img {
     height: auto;
     width: 300px;
+    margin-right: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
