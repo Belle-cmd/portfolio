@@ -11,17 +11,13 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
 
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
 }
-a {
-    /* Remove styling with all a and image tags */
-    padding: 0;
-    margin: 0;
-  }
 
 
 .accounts {
@@ -35,7 +31,7 @@ a {
 .accounts > img:not(.link) {
     height: auto;
     width: 100px;
-    padding: 20px;
+    margin: 20px;
 }
 
 .accounts a > img {
@@ -55,9 +51,15 @@ a {
     padding: 0px 20vw;
 }
 .banner h1 {
-
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+b {
+    /* The letter D and B */
+    font-size: 110px;
 }
 .banner p {
+    font-size: 16px;
     margin: 0;
     padding: 0;
 }
