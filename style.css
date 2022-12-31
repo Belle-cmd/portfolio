@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
+
+:root {
+    --bg-color: #428c86;
+    --banner-name-color: #e63946;
+    --card-boarder-color: #1d3557;
+    --text-color: #f1faee;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+a {
+    /* Remove styling with all a and image tags */
+    padding: 0;
+    margin: 0;
+  }
+
+
+.accounts {
+    position: fixed;  /* Make navbar follow user scrolling */
+
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    width: 10vw;
+}
+.accounts > img:not(.link) {
+    height: auto;
+    width: 100px;
+    padding: 20px;
+}
+
+.accounts a > img {
+    padding: 10px;
+    height: auto;
+    width: 40px;
+}
+
+
+.banner {
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+
+    height: 100vh;
+    font-size: 30px;
+    padding: 0px 20vw;
+}
+.banner h1 {
+
+}
+.banner p {
+    margin: 0;
+    padding: 0;
+}
+
+.about-me img {
+    height: auto;
+    width: 300px;
+}
