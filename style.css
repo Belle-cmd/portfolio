@@ -8,6 +8,7 @@
     --subheader-font-size: 30px;
     --subheader-color: #c4feb1;
     --content-font-size: 18px;
+    --text-highlight-color: #484867;
 }
 
 body {
@@ -38,6 +39,10 @@ h3 {
     /* header used for project card titles */
     color: var(--bg-color);
     font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: var(--subheader-color);
 }
 
 
@@ -132,6 +137,15 @@ b:hover {
     flex-direction: inherit;
     padding: 0px 15vw;
     padding-bottom: 50px;
+}
+.projects a:hover {
+    /* Changes the appearance of the link at hover; 
+    placed here since navbar is affected if projects class isn't specified */
+    cursor: pointer;
+    background-color: var(--text-highlight-color);
+}
+.projects a:visited {
+    text-decoration: none;
 }
 .project-content {
     display: grid;
